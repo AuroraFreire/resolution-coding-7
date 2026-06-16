@@ -1,12 +1,19 @@
 import { json } from "@sveltejs/kit";
-import type { RequestEvent } from "@sveltejs/kit";
 import db from "$lib/server/db";
 
-export async function POST({ request }: RequestEvent) {
+export async function POST({ request }) {
     const { name, address, phone } = await request.json();
-    const statement = db.prepare(
-        "INSERT INTO contacts (name, address, phone) VALUES (@name, @address, @phone)"
-    );
-    statement.run({ name, address, phone });
+
+    const { error } = await db
+        .from("contacts")
+        .insert([{ name, address, phone }]);
+
+    if (error) {
+        return json(
+            { success: false, error: error.message },
+            { status: 500 }
+        );
+    }
+
     return json({ success: true }, { status: 201 });
 }
