@@ -12,7 +12,6 @@
             body: JSON.stringify({name, address, phone}) 
         });
         const result = await response.json();
-        console.log(result);
         goto("/")
     }
 </script>

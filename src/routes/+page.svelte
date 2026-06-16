@@ -9,13 +9,11 @@
     let contacts: Contact[] = $state([]);
 
     async function read_contacts() {
-        console.log("Reading contacts");
         const response = await fetch("/api/read-contacts", {
             method: "GET",
             headers: {"Content-Type": "application/json"}
         });
         const result = await response.json();
-        console.log("Contacts: ", result.contacts);
         return result.contacts;
     }
 
@@ -26,7 +24,6 @@
             body: JSON.stringify({name, address, phone})
         });
         const result = await response.json();
-        console.log(result);
         contacts = await read_contacts();
     }
 
