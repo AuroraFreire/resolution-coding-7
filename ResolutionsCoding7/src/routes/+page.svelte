@@ -36,9 +36,9 @@
 
 </script>
 
-<main class="white-block">
+<main>
     <h2>Contact Book :3</h2>
-
+    <hr>
     {#each contacts as contact}
         <div class="contact-element">
             <div>
@@ -48,12 +48,12 @@
             <div style="text-align: right; display: flex; align_items: center; gap: 1rem">
                 <p>{contact.phone}</p>
                 <button class = "clear_button" onclick={() => remove_contact(contact.name, contact.address, contact.phone)}>
-                    <img src="/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Trash Icon" />
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="red"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
                 </button>
             </div>
         </div>
     {:else}
-        <p style="text-align: center; color: #6b7280; margin: 2rem 0">No contatcs found. Add one below</p>
+        <p style="text-align: center; color: #6b7280; margin: 2rem 0">No contacts found. Add one below</p>
     {/each}
     <div style="text-align: center; margin-top: 1rem">
         <a href="/api/add-contact" class="button-style">Add contact</a>

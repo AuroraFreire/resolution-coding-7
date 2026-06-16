@@ -1,67 +1,64 @@
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f3f4f6;
-    color: #1f2937;
-    margin: 0;
-    padding: 2rem;
+    background-color: seashell;
+    font-family: JetBrains Mono, Consolas, 'Courier New', monospace;
+}
+
+p {
+    font-size: 20px;
+}
+
+h2 {
     display: flex;
     justify-content: center;
+    font-size: 48px;
 }
 
-.white-block {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-}
-
-.contact-element {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid #e5e7eb;
-    transition: transform 0.2s ease;
-}
-
-.contact-element:hover {
-    transform: scale(1.03);
+hr {
+    width: 80%;
+    border-width: 2px;
+    border-color: #f5eeff;
+    border-radius: 5px;
 }
 
 .button-style {
     display: inline-block;
-    background-color: #2563eb;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    color: azure;
+    background-color: #8087b1;
+    padding: 9px;
     text-decoration: none;
     border: none;
-    cursor: pointer;
-    font-size: 1rem;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .button-style:hover {
-    background-color: #1d4ed8;
+    background-color: #6e759e;
+}
+
+
+
+.contact-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #bec4e5;
+  border-radius: 5px;
+  margin: 2rem;
+}
+
+.contact-element:hover {
+    transform: scale(1.02);
+    background-color: #f7ece4;
+    border: 2px solid #b4bce6
 }
 
 .text-input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    box-sizing: border-box;
-}
-
-.clear_button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.clear_button img {
-    width: 20px;
-    height: 20px;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
